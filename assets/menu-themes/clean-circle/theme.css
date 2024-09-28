@@ -111,6 +111,16 @@
     height: var(--center-size);
   }
 
+  &.active:has(>.hovered)>.child>.flower {
+    top: calc(-1 * var(--center-size) * 2);
+    left: calc(-1 * var(--center-size) * 2);
+    width: var(--center-size);
+    height: var(--center-size);
+    background-image: radial-gradient(orange, red);
+    border-radius: 0 50%;
+    transform: rotate(calc(var(--angle) + 45deg)) translateY(calc(cos(var(--angle)) * var(--center-size) * 2)) translateX(calc(sin(var(--angle)) * var(--center-size) * 2));
+  }
+
   &.type-submenu:has(>.hovered:not(.parent))>.icon-layer>.icon-container {
     opacity: 0;
   }
